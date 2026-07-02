@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>Sistem Absensi</title>
@@ -12,4 +12,16 @@
     <p>Lesson 6 - Blade View</p>
 
 </body>
-</html>
+</html> -->
+
+<!-- Gunakan layouts/app.blade.php sebagai template untama -->
+@extends('layouts.app')
+
+<!-- Isi bagian @yield('content') yang ada di layout. -->
+@section('content')
+
+<h1>HOME</h1>
+
+<p>Selamat datang di Employee Attendance System.</p>
+
+@endsection
