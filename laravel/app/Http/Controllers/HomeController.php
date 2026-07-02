@@ -8,7 +8,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return "Selamat datang di Sistem Absensi";
+        #return "Selamat datang di Sistem Absensi";
+        return view ('home.index');
     }
 
     public function index2()
