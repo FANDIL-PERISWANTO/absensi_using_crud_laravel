@@ -17,8 +17,22 @@
 <!-- Gunakan layouts/app.blade.php sebagai template untama -->
 @extends('layouts.app')
 
+@include('home.hero')
+<!-- @include('home.statistics')
+@include('home.announcement') -->
+
 <!-- Isi bagian @yield('content') yang ada di layout. -->
 @section('content')
+
+<div class="row">
+<div class="col-md-6">
+    @include('home.statistics')
+</div>
+<div class="col-md-6">
+    @include('home.announcement')
+</div>
+
+</div>
 
 <h1>HOME</h1>
 
