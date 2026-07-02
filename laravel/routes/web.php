@@ -3,10 +3,10 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    #return view('welcome');
-    return "Hello2 Fandil";
+    return view('welcome');
 });
 
-// Route::get('/', function () {
-//     return "Hello Fandil";
-// });
+#to access this, from default link, add /hello
+Route::get('/hello', function () {
+    return "Hello Fandil";
+});
