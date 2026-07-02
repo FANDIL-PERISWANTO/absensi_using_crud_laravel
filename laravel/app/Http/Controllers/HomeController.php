@@ -10,4 +10,13 @@ class HomeController extends Controller
     {
         return "Selamat datang di Sistem Absensi";
     }
+
+    public function index2()
+    {
+        return [
+            "name" => "Fandil",
+            "position" => ".NET Developer",
+            "framework" => "Laravel"
+        ];
+    }
 }
