@@ -1,3 +1,4 @@
+<!-- Halaman ini sebagai route dasar yang diakses di url browser secara default -->
 <?php
 
 use Illuminate\Support\Facades\Route;
