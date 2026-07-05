@@ -1,23 +1,23 @@
 <!-- Halaman ini sebagai route dasar yang diakses di url browser secara default -->
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-#mengimport HomeController di web route
-use App\Http\Controllers\HomeController;
 
 #default route
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-#change default browser route to HomeController
-Route::get('/', [HomeController::class,'index']);
-
-
-#to access this, from default link, add /hello
-Route::get('/hello', [HomeController::class,'index']);
-#Route::get('/hello', [HomeController::class,'index2']);
-
-Route::get('/hello2', function () {
-    return "Hello Fandil";
+Route::get('/', function () {
+    return view('welcome');
 });
+
+#to access this, from default link, add /dashboard
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
