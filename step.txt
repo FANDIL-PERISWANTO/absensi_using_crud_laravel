@@ -14,3 +14,35 @@ php artisan config:clear
 php artisan migrate
 php artisan optimize:clear
 
+//create controller (biarkan serve tetap berjalan)
+php artisan make:controller HomeController
+
+
+//sebelum setup breeze, cek node.js
+//jika belum ada, install terlebih dahulu
+node -v
+npm -v
+//next
+composer require laravel/breeze --dev
+php artisan breeze:install
+
+choose option 'blade' (#1)
+Which Breeze stack would you like to install?
+  Blade with Alpine .......................................................................... blade
+  Livewire (Volt Class API) with Alpine ................................................... livewire
+  Livewire (Volt Functional API) with Alpine ................................... livewire-functional
+  React with Inertia ......................................................................... react
+  Vue with Inertia ............................................................................. vue
+  API only ..................................................................................... api
+//answer
+blade
+
+Which testing framework do you prefer? [Pest]
+Pest ........................................................................................... 0
+PHPUnit ........................................................................................ 1
+//answer
+1
+
+npm install
+npm run dev
+
