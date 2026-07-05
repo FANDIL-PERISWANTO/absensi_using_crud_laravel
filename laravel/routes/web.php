@@ -5,9 +5,14 @@ use Illuminate\Support\Facades\Route;
 #mengimport HomeController di web route
 use App\Http\Controllers\HomeController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+#default route
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+#change default browser route to HomeController
+Route::get('/', [HomeController::class,'index']);
+
 
 #to access this, from default link, add /hello
 Route::get('/hello', [HomeController::class,'index']);
