@@ -1,7 +1,8 @@
+<!-- menggunakan layout -->
 @extends('layouts.app')
 
+<!-- mengisi contain suatu section -->
 @section('title', 'Home')
-
 @section('content')
 
 <div class="card">
