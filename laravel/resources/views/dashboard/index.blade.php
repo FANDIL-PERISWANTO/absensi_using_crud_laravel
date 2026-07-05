@@ -1,5 +1,5 @@
-<!-- Gunakan layouts/app.blade.php sebagai template untama -->
-@extends('layouts.app')
+<!-- Gunakan layouts/application.blade.php sebagai template untama -->
+@extends('layouts.application')
 
 <!-- Isi bagian @yield('content') yang ada di layout. -->
 @section('content')
